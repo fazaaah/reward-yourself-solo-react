@@ -2,12 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -19,15 +13,73 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* STEP ONE - ENTER INPUT */
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputText {
+  width: 70%;
+  padding: 12px;
+  font-size: 20px;
+}
+
+button {
+  width: 25%;
+  font-size: 20px;
+  padding: 12px;
+  margin-top: 15px;
+  background-color: white;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+/* STEP TWO - PUNCH CARD */
+
+.card-with-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+.card-with-details p {
+  margin: 5px auto;
+}
+
+.card-with-details button {
+  padding: 8px;
+  background: white;
+  border: 2px solid black;
+  font-size: 16px;
+  width: 15%;
+}
+
+.card {
+  border: 2px solid black;
+  border-radius: 10px;
+  background: aquamarine;
+  display: flex;
+  flex-wrap: wrap;
+  width: 260px;
+  justify-content: center;
+  align-items: space-between;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.punch {
+  border: 2px solid black;
+  border-radius: 50%;
+  background: yellow;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
 }
