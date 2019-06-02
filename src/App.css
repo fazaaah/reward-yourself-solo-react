@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  /* background: url(assets/pattern.png); */
+  background-size: 400px 400px;
+  background-repeat: repeat;
+  padding: 20px 0 50px 0;
 }
 
 .App-header {
@@ -27,12 +31,28 @@
 }
 
 .inputText {
-  width: 70%;
+  width: 50%;
   padding: 12px;
   font-size: 20px;
+  box-shadow: none;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  border: 3px solid white;
+  /* border-bottom: 2px solid aqua; */
+  transition: 0.3s ease;
+  margin-bottom: 20px;
 }
 
-button {
+
+.inputText:active,
+.inputText:focus {
+  border-bottom: 3px solid aqua;
+  outline: 0;
+  transition: 0.3s ease;
+}
+
+.form-button {
   width: 25%;
   font-size: 20px;
   padding: 12px;
@@ -40,6 +60,12 @@ button {
   background-color: white;
   border: 2px solid black;
   cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: black;
+  color: white;
 }
 
 /* STEP TWO - PUNCH CARD */
@@ -48,7 +74,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
+  margin: 30px auto;
 }
 .card-with-details p {
   margin: 5px auto;
@@ -59,27 +85,43 @@ button {
   background: white;
   border: 2px solid black;
   font-size: 16px;
-  width: 15%;
+  width: 100px;
+  margin-top: 15px;
 }
 
 .card {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   border-radius: 10px;
+  width: 260px;
+  padding: 15px;
+  margin-top: 10px;
   background: aquamarine;
   display: flex;
   flex-wrap: wrap;
-  width: 260px;
   justify-content: center;
   align-items: space-between;
-  padding: 15px;
-  margin-top: 10px;
+  transition: 0.3s ease;
 }
 
 .punch {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   border-radius: 50%;
   background: yellow;
   width: 50px;
   height: 50px;
   margin: 5px;
+}
+
+.reward-msg {
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 260px;
+  padding: 15px;
+  min-height: 128px;
+  display: flex;
+  align-items: center;
+}
+
+.reward-msg p {
+  font-size: 22px;
 }

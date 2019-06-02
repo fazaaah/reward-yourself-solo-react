@@ -13,7 +13,7 @@ class Form extends Component {
 
     handleChange = (event) => {
         this.setState({
-           [event.target.name] : event.target.value
+        [event.target.name] : event.target.value
         })
     }
 
@@ -39,6 +39,7 @@ class Form extends Component {
                     name="currentHabit"
                     placeholder="ex. pack lunch from home"
                     value={this.state.currentHabit}
+                    autoComplete="off"
                 />
 
                 <h2>How would you like to reward yourself?</h2>
@@ -49,13 +50,15 @@ class Form extends Component {
                     name="reward"
                     placeholder="ex. get a frappuccino"
                     value={this.state.reward}
+                    autoComplete="off"
                 />
 
                 <button
                     onClick={this.handleSubmit}
+                    class="form-button"
                 >
                     Get started!
-          </button>
+                </button>
             </form>
         ) 
     }

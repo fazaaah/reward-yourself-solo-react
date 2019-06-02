@@ -64,7 +64,7 @@ class App extends Component {
           <Form />
           {
             this.state.habits.map((habit)=>{
-              console.log(habit)
+              // console.log(habit)
               return (<PunchCard habit={habit} reward={habit} />)
             })
             }
