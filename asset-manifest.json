@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/project-5-solo-react/static/css/main.ab10c862.chunk.css",
+    "main.js": "/project-5-solo-react/static/js/main.3051c883.chunk.js",
+    "main.js.map": "/project-5-solo-react/static/js/main.3051c883.chunk.js.map",
+    "runtime~main.js": "/project-5-solo-react/static/js/runtime~main.37216aff.js",
+    "runtime~main.js.map": "/project-5-solo-react/static/js/runtime~main.37216aff.js.map",
+    "static/js/2.b3f50240.chunk.js": "/project-5-solo-react/static/js/2.b3f50240.chunk.js",
+    "static/js/2.b3f50240.chunk.js.map": "/project-5-solo-react/static/js/2.b3f50240.chunk.js.map",
+    "index.html": "/project-5-solo-react/index.html",
+    "precache-manifest.1b19211ebabda4aba7d09ce9f5c5e5d5.js": "/project-5-solo-react/precache-manifest.1b19211ebabda4aba7d09ce9f5c5e5d5.js",
+    "service-worker.js": "/project-5-solo-react/service-worker.js",
+    "static/css/main.ab10c862.chunk.css.map": "/project-5-solo-react/static/css/main.ab10c862.chunk.css.map",
+    "static/media/App.css": "/project-5-solo-react/static/media/background.b480a3e3.png"
+  }
+}
