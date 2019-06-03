@@ -17,6 +17,8 @@ class PunchCard extends Component {
             punch4:false,
             punch5:false,
             punch6:false,
+            punch7:false,
+            punch8:false,
             bgColor1: 'blue'
         }
     }
@@ -33,7 +35,6 @@ class PunchCard extends Component {
         // dbRef.push({punches: currentPunches + 1});
 
         let currentPunchState = this.state[punchName]
-        // console.log(currentPunchState)
 
         this.setState({
             [punchName]: {
@@ -78,26 +79,50 @@ class PunchCard extends Component {
                                 onClick={this.handleClick}
                                 style={{ backgroundColor: this.state.punch2.bgColor }}>
                             </div>
-
                             <div
                                 className="punch"
                                 id="punch3"
-                                // onClick={() => { this.setState({ bgColor: "red" }) }}
                                 onClick={this.handleClick}
                                 style={{ backgroundColor: this.state.punch3.bgColor }}>
                             </div>
+                            <div
+                                className="punch"
+                                id="punch4"
+                                onClick={this.handleClick}
+                                style={{ backgroundColor: this.state.punch4.bgColor }}>
+                            </div>
+                            <div
+                                className="punch"
+                                id="punch5"
+                                onClick={this.handleClick}
+                                style={{ backgroundColor: this.state.punch5.bgColor }}>
+                            </div>
+                            <div
+                                className="punch"
+                                id="punch6"
+                                onClick={this.handleClick}
+                                style={{ backgroundColor: this.state.punch6.bgColor }}>
+                            </div>
+                            <div
+                                className="punch"
+                                id="punch7"
+                                onClick={this.handleClick}
+                                style={{ backgroundColor: this.state.punch7.bgColor }}>
+                            </div>
+                            <div
+                                className="punch"
+                                id="punch8"
+                                onClick={this.handleClick}
+                                style={{ backgroundColor: this.state.punch8.bgColor }}>
+                            </div>
+                            
 
-                            <div className="punch" onClick={this.handleClick}></div>
-                            <div className="punch" onClick={this.handleClick}></div>
-                            <div className="punch" onClick={this.handleClick}></div>
-                            <div className="punch" onClick={this.handleClick}></div>
-
-                            <div 
+                            {/* <div 
                             className="punch" 
                             id="punch8" 
                             onClick= {() => {this.setState({bgColor: "pink"})}}
                             style={{ backgroundColor: this.state.bgColor }}>
-                            </div>
+                            </div> */}
 
                         </div>
                     </div>
