@@ -8,10 +8,7 @@ class PunchCard extends Component {
         this.state = {
             punches: 0,
             
-            punch1: {
-                toggle: false,
-                bgColor: ''
-            },
+            punch1: false,
             punch2:false,
             punch3:false,
             punch4:false,
@@ -19,7 +16,6 @@ class PunchCard extends Component {
             punch6:false,
             punch7:false,
             punch8:false,
-            bgColor1: 'blue'
         }
     }
 
@@ -30,23 +26,14 @@ class PunchCard extends Component {
         console.log(punchName)
         const currentPunches = this.props.habit.card.punches;
         const dbRef = firebase.database().ref(this.props.habit.key).update({ punches: currentPunches + 1 });
-        
-        // const updatedPunches = currentPunches + 1;
-        // dbRef.push({punches: currentPunches + 1});
 
         let currentPunchState = this.state[punchName]
 
         this.setState({
             [punchName]: {
-                bgColor: 'blue'
+                bgColor: '#2b555a'
             }
-            // bgColor: "dimgrey",
-            // [punchName]: !currentPunchState
         })
-
-        // if (punchName === true) {
-        //     bgColor: "dimgrey"
-        // }
     }  
 
     removeCard = (cardID) => {
@@ -56,7 +43,6 @@ class PunchCard extends Component {
 
     render() {
         const currentPunches = this.props.habit.card.punches;
-        // console.log(currentPunches)
 
         return (
             <Fragment>
@@ -71,7 +57,7 @@ class PunchCard extends Component {
                                 className="punch" 
                                 id="punch1"
                                 onClick={this.handleClick}
-                                style={{ backgroundColor: this.state.punch1.bgColor }}>
+                                style={{ backgroundColor: this.state.punch1.bgColor  }}>
                             </div>
                             <div
                                 className="punch"
@@ -115,14 +101,6 @@ class PunchCard extends Component {
                                 onClick={this.handleClick}
                                 style={{ backgroundColor: this.state.punch8.bgColor }}>
                             </div>
-                            
-
-                            {/* <div 
-                            className="punch" 
-                            id="punch8" 
-                            onClick= {() => {this.setState({bgColor: "pink"})}}
-                            style={{ backgroundColor: this.state.bgColor }}>
-                            </div> */}
 
                         </div>
                     </div>
@@ -133,7 +111,6 @@ class PunchCard extends Component {
                     <button onClick={() => { 
                         this.removeCard(this.props.habit.key) }}
                         >Remove</button>
-                    
                 </div>    
             </Fragment>
         )

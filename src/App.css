@@ -1,9 +1,20 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.visually-hidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400i,700,700i,900,900i|Roboto:400,500,700&display=swap');
+
 .App {
   text-align: center;
-  /* background: url(assets/pattern.png); */
-  background-size: 400px 400px;
+  background: url(assets/background.png);
+  background-size: 400px 350px;
   background-repeat: repeat;
   padding: 20px 50px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .App-header {
@@ -22,6 +33,35 @@
   margin: 0 auto;
 }
 
+button {
+  cursor: pointer;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  padding: 15px;
+}
+
+@media (max-width: 742px) {
+  h2 {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 660px) {
+  h2 {
+    width: 100%;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 350px) {
+  h2 {
+    font-size: 19px;
+  }
+}
+
 /* STEP ONE - ENTER INPUT */
 
 .form-container {
@@ -33,39 +73,97 @@
 .inputText {
   width: 50%;
   padding: 12px;
+  font-family: 'Roboto', sans-serif;
   font-size: 20px;
   box-shadow: none;
   text-align: center;
   display: inline-block;
   position: relative;
   border: 3px solid white;
-  /* border-bottom: 2px solid aqua; */
   transition: 0.3s ease;
   margin-bottom: 20px;
 }
 
-
 .inputText:active,
 .inputText:focus {
-  border-bottom: 3px solid aqua;
+  border-bottom: 3px solid #a9dee4;
   outline: 0;
   transition: 0.3s ease;
 }
 
+@media (max-width: 1100px) {
+  .inputText {
+    width: 450px;
+  }
+}
+
+@media (max-width: 700px) {
+  .inputText {
+    width: 80%;
+  }
+}
+
+@media (max-width: 350px) {
+  .inputText {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+}
+
 .form-button {
-  width: 25%;
+  width: 180px;
+  font-family: 'Roboto', sans-serif;
   font-size: 20px;
   padding: 12px;
   margin-top: 15px;
   background-color: white;
   border: 2px solid black;
-  cursor: pointer;
   transition: 0.3s ease;
 }
 
 .form-button:hover {
   background-color: black;
   color: white;
+}
+
+@media (max-width: 700px) {
+  .form-button {
+    font-size: 18px;
+    width: 160px;
+  }
+}
+
+@media (max-width: 350px) {
+  .form-button {
+    font-size: 16px;
+    width: 140px;
+  }
+}
+
+.explanation {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  width: 60%;
+  margin: 10px auto;
+  background: #fff;
+  padding: 20px;
+}
+
+@media (max-width: 850px) {
+  .explanation {
+    width: 80%;
+  }
+}
+
+@media (max-width: 655px) {
+  .explanation {
+    font-size: 16px;
+    margin: 5px auto;
+    width: 100%;
+  }
 }
 
 /* STEP TWO - PUNCH CARD */
@@ -90,12 +188,11 @@
 }
 
 .card {
-  /* border: 2px solid black; */
   border-radius: 10px;
-  width: 260px;
+  width: 320px;
   padding: 15px;
   margin-top: 10px;
-  background: aquamarine;
+  background: #6dc1cc;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -104,24 +201,57 @@
 }
 
 .punch {
-  /* border: 2px solid black; */
   border-radius: 50%;
-  background: yellow;
+  background: #a9dee4;
+  cursor: pointer;
   width: 50px;
   height: 50px;
-  margin: 5px;
+  margin: 10px;
+  -webkit-box-shadow: 8px 9px 0px -2px rgba(255,255,255,1);
+  -moz-box-shadow: 8px 9px 0px -2px rgba(255,255,255,1);
+  box-shadow: 8px 9px 0px -2px rgba(255,255,255,1);
 }
 
+@media (max-width: 400px) {
+  .card {
+    width: 270px;
+    padding: 8px;
+    padding-bottom: 12px;
+  }
+  .punch {
+    -webkit-box-shadow: 8px 9px 0px -4px rgba(255,255,255,1);
+    -moz-box-shadow: 8px 9px 0px -4px rgba(255,255,255,1);
+    box-shadow: 8px 9px 0px -4px rgba(255,255,255,1);
+    margin: 6px;
+  }
+}
+
+/* STEP THREE - DISPLAY REWARD */
+
 .reward-msg {
-  border: 2px solid black;
+  background: #fffaa6;
   border-radius: 10px;
-  width: 260px;
+  width: 320px;
   padding: 15px;
-  min-height: 128px;
+  min-height: 148px;
   display: flex;
   align-items: center;
 }
 
 .reward-msg p {
   font-size: 22px;
+  padding: 15px;
+}
+
+@media (max-width: 500px) {
+  .reward-msg p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .reward-msg {
+    width: 270px;
+    padding: 8px;
+  }
 }

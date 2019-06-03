@@ -37,10 +37,13 @@ class Form extends Component {
                     type="text"
                     class="inputText"
                     name="currentHabit"
-                    placeholder="ex. pack lunch from home"
+                    id="currentHabit"
+                    placeholder="ex. pack lunch"
                     value={this.state.currentHabit}
                     autoComplete="off"
+                    required
                 />
+                <label for="currentHabit" className="visually-hidden">What habits would you like to grow?</label>
 
                 <h2>How would you like to reward yourself?</h2>
                 <input
@@ -48,10 +51,15 @@ class Form extends Component {
                     type="text"
                     class="inputText"
                     name="reward"
-                    placeholder="ex. get a frappuccino"
+                    id="reward"
+                    placeholder="ex. get a frapp"
                     value={this.state.reward}
                     autoComplete="off"
+                    required
                 />
+                <label for="reward" className="visually-hidden">How would you like to reward youself?</label>
+
+                <p className="explanation">Each time you practice your habit, punch a hole in your rewards card. When all are punched, go get your reward! You earned it!</p>
 
                 <button
                     onClick={this.handleSubmit}
@@ -59,6 +67,7 @@ class Form extends Component {
                 >
                     Get started!
                 </button>
+
             </form>
         ) 
     }

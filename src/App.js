@@ -12,8 +12,6 @@ class App extends Component {
     this.state = {
       // the habits array is made up of objects - each object represents a habit with its name and its associated reward and completed punches.
       habits: []
-      
-
     }
   }
 
@@ -23,14 +21,6 @@ class App extends Component {
       dbRef.on('value', (response) => {
         const newState = [];
         const data = response.val();
-        console.log(response)
-
-    // for (let property in data) {
-    //   // newState is the updated array of habit objects
-    //   // (data[property] is each habit object
-    //   newState.push(data[property])
-    //   // console.log(habits.key)
-    // }
 
         for (let key in data) {
           newState.push({
@@ -43,28 +33,16 @@ class App extends Component {
     this.setState({
       habits: newState,
     })
-
     })
   }
 
-  // deleteHabit = (index) => {
-  //   const oldHabits = [...this.state.habits];
-  //   const updatedHabits = oldHabits.filter((item, i) => i !== index);
-  //   this.setState({
-  //     habits: updatedHabits
-  //   });
-  // }
-
-  // render: what's displayed on the screen
   render(){
     return (
       <div className="App">
         <div className="wrapper">
-          {/* display the Form component */}
           <Form />
           {
             this.state.habits.map((habit)=>{
-              // console.log(habit)
               return (<PunchCard habit={habit} reward={habit} />)
             })
             }
@@ -72,7 +50,6 @@ class App extends Component {
       </div>
     );
   }
-    
 }
 
 export default App;
