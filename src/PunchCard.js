@@ -7,7 +7,6 @@ class PunchCard extends Component {
         super()
         this.state = {
             punches: 0,
-            
             punch1: false,
             punch2:false,
             punch3:false,
