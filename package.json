@@ -2,7 +2,7 @@
   "name": "rewards-card-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://fazaaah.github.io/reward-yourself-solo-react",
+  "homepage": "https://fazaaah.github.io/reward-yourself-solo-react/",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",

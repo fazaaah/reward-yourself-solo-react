@@ -105,11 +105,13 @@ class PunchCard extends Component {
                     </div>
                     : 
                     <div className="reward-msg">
-                        <p>You're doing amazing! Go treat yourself: {this.props.habit.card.reward}!</p>
+                            <p>You're doing amazing! Go treat yourself: <span className="reward-input">{this.props.habit.card.reward}!</span></p>
                     </div>} 
-                    <button onClick={() => { 
-                        this.removeCard(this.props.habit.key) }}
-                        >Remove</button>
+                    <button 
+                        onClick={() => { this.removeCard(this.props.habit.key) }}
+                        className="remove-button">
+                            Remove
+                    </button>
                 </div>    
             </Fragment>
         )

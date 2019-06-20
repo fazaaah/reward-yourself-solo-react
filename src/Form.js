@@ -35,7 +35,7 @@ class Form extends Component {
                 <input
                     onChange={this.handleChange}
                     type="text"
-                    class="inputText"
+                    className="inputText"
                     name="currentHabit"
                     id="currentHabit"
                     placeholder="ex. pack lunch"
@@ -49,7 +49,7 @@ class Form extends Component {
                 <input
                     onChange={this.handleChange}
                     type="text"
-                    class="inputText"
+                    className="inputText"
                     name="reward"
                     id="reward"
                     placeholder="ex. get a frapp"
@@ -63,7 +63,7 @@ class Form extends Component {
 
                 <button
                     onClick={this.handleSubmit}
-                    class="form-button"
+                    className="form-button"
                 >
                     Get started!
                 </button>
